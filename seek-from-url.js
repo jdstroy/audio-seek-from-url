@@ -4,7 +4,6 @@
 	seekIfNeeded();
 	displayTimeURL();
 
-
 	function seekIfNeeded () {
 		let q = window.location.search;
 
@@ -30,7 +29,6 @@
 
 		try {
 	  		str.match(/[0-9]+[hms]+/g).forEach(function (val) {
-
 				let part = val.match(/[hms]+|[0-9]+/g);
 
 				parts[part[1]] = parseInt(part[0], 10);

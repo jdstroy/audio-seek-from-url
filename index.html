@@ -1,51 +1,19 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Audio Seek from URL</title>
-    <style>
-      body {
-        background-color: #1e1e1d;
-        color: #f8f8f8;
-        font-family: helvetica, arial, sans-serif;
-        margin: 38vh auto;
-        text-align: center;
-        width: 93%;
-      }
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-      a {
-        color: #ffad15;
-        display: inline-block;
-        margin-top: 2em;
-        text-decoration: none;
+        <title>HTML Audio Seek from URL</title>
 
-        display: none;
-      }
+        <link rel="stylesheet" href="seek-from-url.css" />
+    </head>
+    <body>
+         <audio src="audio.mp3" id="media" preload="auto" controls></audio>
 
-      input {
-        border: 0;
-        border-radius: 3px;
-        box-sizing: border-box;
-        font-size: 1em;
-        margin: 2em auto 0 auto;
-        max-width: 500px;
-        padding: 0.6em 0.6em;
-        width: 95%;
-      }
+         <input placeholder="Waiting for current time" type="url" value="" class="current-url">
 
-      audio {
-        display: block;
-        margin: 0 auto;
-        max-width: 600px;
-        width: 95%
-      }
-    </style>
-  </head>
-  <body>
-    <audio src="./audio.mp3" id="media" preload="auto" controls></audio>
-
-    <input placeholder="Waiting for current time" type="url" value="" class="current-url">
-
-    <script src="seek-from-url.js"></script>
-  </body>
+        <script src="seek-from-url.js"></script>
+    </body>
 </html>
