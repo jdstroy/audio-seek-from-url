@@ -72,21 +72,21 @@ function secondsFromTimeParts(parts) {
 }
 
 function displayTimeURL() {
-	let loc = window.location;
-	let timeDisplay = document.querySelector('.current-url');
-	let media = document.getElementById('media');
-	let coolTime = '';
+	var loc = window.location;
+	var timeDisplay = document.querySelector(".current-url");
+	var media = document.getElementById("media");
+	var coolTime = "";
 
-	media.addEventListener('timeupdate', function () {
+	media.addEventListener("timeupdate", function () {
 		let newCoolTime = timeStringFromParts(timePartsFromSeconds(media.currentTime));
 
 		if (coolTime != newCoolTime) {
 			coolTime = newCoolTime;
 
-			let url = loc.origin + loc.pathname + '?t=' + coolTime;
+			let url = loc.origin + loc.pathname + "?t=" + coolTime;
 
 			if (timeDisplay != document.activeElement) {
-				timeDisplay.setAttribute('value', url);
+				timeDisplay.setAttribute("value", url);
 			}
 		}
 	});
