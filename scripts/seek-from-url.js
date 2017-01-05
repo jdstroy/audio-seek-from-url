@@ -1,6 +1,3 @@
-seekIfNeeded();
-displayTimeURL();
-
 function seekIfNeeded() {
 	var q = window.location.search;
 
@@ -91,3 +88,8 @@ function displayTimeURL() {
 		}
 	});
 }
+
+window.onload = function () {
+	seekIfNeeded();
+	displayTimeURL();
+};
